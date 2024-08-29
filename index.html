@@ -15,12 +15,12 @@
 
 	.popup-image 
 	{
-   	    max-width: 900px; /* Изображение не выйдет за рамки popup */
-   	    max-height: 100%; /* Изображение не выйдет за рамки popup */
-  	    width: auto; /* Автоматическая настройка ширины */
-  	    height: auto; /* Автоматическая настройка высоты */
-  	    display: block; /* Центрирование изображения */
- 	    margin: 0 auto; /* Центрирование изображения */
+   	    max-width: 900px;
+   	    max-height: 100%;
+  	    width: auto;
+  	    height: auto;
+  	    display: block;
+ 	    margin: 0 auto;
         }
     </style>
 </head>
@@ -30,21 +30,17 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-    // Инициализация карты
     var map = L.map('map', {
         crs: L.CRS.Simple,
         minZoom: -1,
         maxZoom: 1
     }).setView([0, 0], 0);
 
-    // Загрузка пользовательского изображения карты
     var bounds = [[0,0], [1000,1000]];
     var image = L.imageOverlay('huntMap.jpg', bounds).addTo(map);
 
-    // Подгонка карты к размерам изображения
     map.fitBounds(bounds);
 
-    // Пример добавления маркера
         var marker = L.marker([700, 550]).addTo(map)
 	marker.bindPopup('<img src="Cash/cash1.png" class="popup-image" alt="Информация о локации">');
 
@@ -63,8 +59,30 @@
 	var marker = L.marker([446, 600]).addTo(map)	
 	marker.bindPopup('<img src="Cash/cash6.png" class="popup-image" alt="Информация о локации">');
 
-    // Вы можете добавить больше маркеров или слоев как вам нужно
-</script>
+	var marker = L.marker([677, 745]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash7.png" class="popup-image" alt="Информация о локации">');
 
+	var marker = L.marker([696, 66]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash8.png" class="popup-image" alt="Информация о локации">');
+
+	var marker = L.marker([216, 840]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash9.png" class="popup-image" alt="Информация о локации">');
+
+	var marker = L.marker([618, 396]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash10.png" class="popup-image" alt="Информация о локации">');
+
+	var marker = L.marker([630, 333]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash11.png" class="popup-image" alt="Информация о локации">');
+
+	var marker = L.marker([398, 486]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash12.png" class="popup-image" alt="Информация о локации">');
+
+	var marker = L.marker([655, 750]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash13.png" class="popup-image" alt="Информация о локации">');
+
+	var marker = L.marker([184, 863]).addTo(map)	
+	marker.bindPopup('<img src="Cash/cash14.png" class="popup-image" alt="Информация о локации">');
+
+</script>
 </body>
 </html>
